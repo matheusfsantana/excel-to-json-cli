@@ -1,0 +1,20 @@
+{
+  "name": "excel-to-json-cli",
+  "version": "1.0.0",
+  "description": "Convert Excel files to JSON format using simple CLI commands.",
+  "main": "/bin/excel-to-json-cli.js",
+  "type": "module",
+  "bin":{
+    "excel-to-json": "./bin/excel-to-json-cli.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matheus Santana",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "exceljs": "^4.4.0"
+  }
+}
