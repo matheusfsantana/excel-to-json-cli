@@ -63,7 +63,7 @@ async function main(options) {
 
     if (options.columns){
         const rl = readline.createInterface({ input, output });
-        console.log("Renomeie as colunas que você quer que mude na chave no seu JSON. Deixe em branco caso não queira alterar o nome da coluna")
+        console.log("Renomeie as colunas que você deseja alterar na chave do seu JSON. Deixe em branco se não quiser alterar o nome da coluna.")
         for (let [index, value] of header.entries()){
             const newColumn = await rl.question(`${value}: `)
             if (newColumn){
