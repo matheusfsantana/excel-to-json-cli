@@ -8,15 +8,17 @@ import { writeJsonFile } from '../lib/writeToJson.js';
 import { Command } from 'commander';
 import path from 'path'
 import fs from 'fs';
+import { fileURLToPath } from 'url';
 
 // Reading package.json to get the version
-const packageJson = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const packageJson = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json'), 'utf8'));
 
 const program = new Command();
 
 program
   .name('excel-to-json-cli')
-  .description(`excel-to-json-cli - ${packageJson.version}\n\nUm CLI simples para converter arquivos .xslx para .json`)
+  .description(`excel-to-json-cli ${packageJson.version}\n\nUm CLI simples para converter arquivos .xslx para .json`)
   .version(packageJson.version);
 
 program
