@@ -30,7 +30,7 @@ program
          'Especifique aonde você quer salvar seu arquivo JSON. Exemplo: -o caminho/seu/arquivo/json/file.json')
 
 program.configureHelp({
-commandUsage: () => 'excel-to-json-cli [opções]',
+commandUsage: () => 'excel-to-json [opções]',
 optionDescription: (option) => {
     switch (option.long) {
         case '--version' || '-V':
