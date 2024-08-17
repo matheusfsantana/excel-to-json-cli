@@ -30,12 +30,12 @@ $ excel-to-json -c -f ../caminho/para/seu/arquivo/excel.xlsx -o caminho/para/seu
 | `-o`, `--output <output>` | Especifique onde deseja salvar o arquivo JSON.                                                    | `-o caminho/seu/arquivo/json/file.json`   |
 | `-h`, `--help`         | Exibe ajuda sobre os comandos disponíveis.                                                         |                                            |
 
-
-# Possiveis futuras melhorias
-- Adicionar ao npm/yarn
-- Testes
-- Verificar/testar funcionamento em outros sistemas (Windows e Mac)
-
 # Melhorias implementadas
 
-- Agora o feedback ao salvar 
+- Agora o feedback ao salvar ou ao dar um erro caso o arquivo/diretório não exista, retorna o caminho completo do arquivo ou diretorio.
+Ex: Salvo com sucesso em /home/user/folder/file.json
+
+- Agora ao salvar um arquivo com o mesmo nome em uma mesma pasta o arquivo não é sobreescrito, é criado um novo;
+Ex: teste (1).json, teste (2).json, etc
+
+- Testes unitários para as funções de extrair dados do excel, converter os dados para objeto e salvar arquivo em json.
