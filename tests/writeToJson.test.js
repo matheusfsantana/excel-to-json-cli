@@ -1,7 +1,7 @@
 import { jest } from '@jest/globals';
 import fs from 'fs';
 import path from 'path';
-import { writeJsonFile, renameFileIfAlreadyExists} from '../lib/writeToJson.js';
+import { writeJsonFile } from '../lib/writeToJson.js';
 
 fs.existsSync = jest.fn();
 fs.promises.writeFile = jest.fn();
@@ -25,7 +25,7 @@ describe('writeJsonFile', () => {
 
     expect(fs.existsSync).toHaveBeenCalledWith(filepath);
     expect(exitSpy).toHaveBeenCalledWith(1);
-    expect(errorSpy).toHaveBeenCalledWith(`Erro: o diretório ${filepath} do arquivo ${filename} não foi encontrado.`)
+    expect(errorSpy).toHaveBeenCalledWith(`Erro: o diretório ${path.resolve(filepath)} não foi encontrado.`)
   });
 
   it('should rename the file if filename already exists', async () => {

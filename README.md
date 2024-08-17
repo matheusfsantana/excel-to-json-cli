@@ -35,3 +35,7 @@ $ excel-to-json -c -f ../caminho/para/seu/arquivo/excel.xlsx -o caminho/para/seu
 - Adicionar ao npm/yarn
 - Testes
 - Verificar/testar funcionamento em outros sistemas (Windows e Mac)
+
+# Melhorias implementadas
+
+- Agora o feedback ao salvar 
